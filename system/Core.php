@@ -111,9 +111,9 @@
 			//system库引入名字/system/wa.php
 			$system_file = SYSTEM_PATH."{$class}.php";
 			//model引入名字/app/models/wa.php
-			$model_file = APP_PATH."app/models/{$class}.php";
+			$model_file = APP_PATH."models/{$class}.php";
 			//controllers引入名字/app/controllers/wa.php
-			$controller_file = APP_PATH."app/controllers/{$class}.php";
+			$controller_file = APP_PATH."controllers/{$class}.php";
 			if( file_exists($system_file) ){
 				require($system_file);
 			}elseif( file_exists($model_file) ){
