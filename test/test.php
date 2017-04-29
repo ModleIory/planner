@@ -99,5 +99,41 @@
 	$v = array_map('deal', $you);
 
 	// var_dump($v);die;
-	echo get_magic_quotes_gpc()==true;
+	echo '###########################################'."<br>";
+	echo get_magic_quotes_gpc();
+
+	echo $_GET['home'];
+	$_ENV['you'] = 'me';
+	print_r( $_ENV);
+
+	echo "<br>"."!!!!!!!!!!!!!!!!!!!!"."<br>";
+
+	$p = $_GET['url'];
+	echo $p;
+	$p_a = explode('/', $p);
+	print_r($p_a);
+
+	echo "<br>"."!!!!!!!!!!!!!!!!!!!!"."<br>";
+
+	function fuck($a,$b){
+		echo "this is {$a} and {$b}";
+	}
+	
+	call_user_func_array('fuck',array('fuck','world'));
+
+	echo "<br>"."!!!!!!!!!!!!!!!!!!!!"."<br>";
+
+	$arr = [1];
+
+	echo array_shift($arr).'ddd-';
+	echo array_shift($arr)==false;
+
+	echo "<br>"."!!!!!!!!!!!extract(var_array)!!!!!!!!!"."<br>";
+
+	$arr = array("fuck"=>"world","fight"=>"man");
+
+	extract($arr);
+	echo $fuck.$fight;
+
+
 
