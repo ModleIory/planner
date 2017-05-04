@@ -1,6 +1,4 @@
-<?php 
-	class Plan_Model{
-		public function Plan_Model(){
-
-		}
+<?php
+	class Plan_Model extends Plan_Database{
+		
 	}

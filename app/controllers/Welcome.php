@@ -8,6 +8,8 @@
 			$data['user'] = 'modle';
 			$data['wife'] = 'fairy';
 			$data['list'] = array(1,2,4,5);
+			$this->load_model('User_model');
+			$this->User->get_by_id();
 			$this->view->assign('welcome',$data);
 		}
 	}

@@ -4,8 +4,10 @@
 
 		}
 		//相对于views文件夹的路径$view_path
-		public function assign($view_path,$data_arr){
-			extract($data_arr);
+		public function assign($view_path,$data_arr=null){
+			if($data_arr){
+				extract($data_arr);
+			}
 			$view = APP_PATH."views/{$view_path}.php";
 			if(file_exists($view)){
 				require_once($view);

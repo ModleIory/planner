@@ -3,6 +3,7 @@
 		public function run(){
 			//函数里面不能用$this->method_name(),是回调函数,这么写在class里面
 			//当要实例化一个class时候若是没有引入,那么就会执行这个函数来指派任务
+			//里面本来应该是个函数的名字,但是在对象里面,不可以"$this->autoload_class",只能array($this,'autoload_class')
 			spl_autoload_register(array($this,'autoload_class'));
 			$this->check_environment();
 			$this->removeMagicQuotes();
@@ -14,7 +15,7 @@
 		 */
 		private function route(){
 			$controller = "";
-			$action = "";
+			$action = "";  
 			$params = array();
 
 			$uri = $_SERVER['REQUEST_URI'];// /index.php/controller/action/param1/param2
