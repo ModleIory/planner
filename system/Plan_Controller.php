@@ -1,6 +1,7 @@
 <?php 
 	class Plan_Controller{
 		protected $view = '';
+		protected $db = "";
 		//$c controller name  $a action name
 		public function Plan_Controller($c=null,$a=null){
 			$this->view = new Plan_View();

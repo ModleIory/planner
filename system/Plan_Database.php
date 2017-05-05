@@ -16,7 +16,7 @@
 			}
 			$this->mysqli->set_charset(DB_CHARSET);
 		}
-
+		//对该对象的调用完全结束时候使用,它被继承,当子完成时候,才算不会调用它了 ,所以,他就子完了之后才关闭
 		function __destruct(){
 			echo "close mysql ok!";
 			$this->mysqli->close();
