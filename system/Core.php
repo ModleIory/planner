@@ -74,6 +74,7 @@
 		}
 		/*
 			解决用户输入的斜线的过滤
+			可以防止sql注入的
 		*/
 		private function removeMagicQuotes(){
 			//得到看看php有没有打开get/post/cookie的功能,如果打开了

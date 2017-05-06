@@ -8,6 +8,7 @@
 	//框架核心库路径
 	//__DIR__是system下
 	define('SYSTEM_PATH',BASE_PATH.'system/');
+	define('LIBS_PATH',APP_PATH.'libs/');
 	// echo SYSTEM_PATH;die;
 	//$_SERVER['SCRIPT_NAME']是指向index.php,因为这个是在index.php引入的嘛
 	// defined('APP_PATH') or define('APP_PATH',dirname($_SERVER['SCRIPT_NAME']).'/');
